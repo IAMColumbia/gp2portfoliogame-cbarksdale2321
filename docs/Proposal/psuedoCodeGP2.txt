@@ -1,0 +1,51 @@
+											---Player Turn Example(52 Card Deck)---
+
+								*Players start with 5 random cards from deck. The rest are placed down to be pulled from(stack)*
+
+					*player is are prompted to ask a player for more of any type of card that they have. They click on a player and UI buttons appears(EX: "Ask for Queens")*
+
+
+
+if(OpponentHasCard)
+{
+
+	take all of the type of card you asked for(that the specified player has)
+
+	if(Have Four of a Kind)
+	{
+		thisPlayerBookCount + 1;
+
+		Place cards down(Cannot be used anymore)	
+	}
+
+	Continue turn(Ask again)
+}
+if (!OpponentHasCard)
+{
+	
+	Told to go fish and pull card from the deck
+
+	if(Card pulled from deck matches what you asked for)
+	{
+		Continue turn(Ask again)
+	}
+	else
+	{
+		End turn
+	}
+
+}
+
+
+												---Game End Conditions---
+
+	
+
+
+
+
+if(No more cards in stack)
+	{
+
+		Player with the most books of cards wins
+	}
