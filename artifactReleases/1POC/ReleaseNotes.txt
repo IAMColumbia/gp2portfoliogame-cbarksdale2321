@@ -1,1 +1,6 @@
-Release Notes version 1 POC
+Release Notes version 1 Proof of Concept
+
+Added Deck that hands out randomly shuffled cards
+Cards have been given their own suit and value that can be referenced
+Cards can be drawn from Deck
+Selected card feedback(green shade)

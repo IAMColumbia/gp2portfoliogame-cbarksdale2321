@@ -1,0 +1,46 @@
+Logged Bugs:
+
+- Player cards don't change poisition when AI takes card(s) from deck
+-AI will sometimes place down a card as if it were a complete book
+-If there isn't a card in the deck during Gamestate.GoFish then it breaks the game (Debug: Couldn't find a card to display)
+ 	-fix or create a function that handles this(Priority fix)
+-replay State
+
+Logged additions:
+
+-Card animations(Lerp to their respective places)
+- Logic now allows for a Win State
+- Fixed bug where cards would become unclickable and soft-lock game
+- Fixed bug where AI cards would not have a rank or number
+- Fixed bug where isAI was not set to true(broke alot of functionality)
+- Main Menu additions
+
+Final Build Post Mortem
+
+    Patterns Implemented:
+        State Pattern: Organized game flow and when events should be executed
+
+    Progromatic Challenges:
+        How to set up cards: Had difficulty setting up card infromation 
+        due to the fact that card information is constantly being passed 
+        between places(Keeping track of lists)
+    
+    Reusable Code:
+        All code pertaining to card data is resuable, but other classes such as "Game" 
+        or "GameData" are specific to the rules of Go Fish.
+    
+    Maintainable Code:
+        It's not easy to add more players because my functions 
+        rely on the fact that there are only two players. Maybe if I abstract 
+        the GameData class to allow for X amount of players it would work. As for the cards, 
+        you could make any amount of Total cards, but it has to be changed
+        within the "Constants" class.
+
+    Techincal Debt:
+        I think I took the time to fully think through each class 
+        and attempted to find solutions that allowed my 
+        code to be scalable. Unfortunately, as I mentioned above,
+        I wasn't able to abstract amount of players, but besides that
+        I believe I don't have much technical debt.(maybe a few static calls)
+        
+        

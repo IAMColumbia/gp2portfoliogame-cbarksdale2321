@@ -1,0 +1,20 @@
+Logged Bugs:
+
+-If player gets 4th of a card from the deck it doesn't automatically make a book.
+- Player cards don't change poisition when AI takes card(s) from deck
+- Book position of AI need to be readjusted
+- Sometimes an number mismatch can occur which breaks the game(Ex: "Displaying cards count 8 is not equal to card values count 9 for Player02")
+	-fix or create a function that handles this(Priority fix)
+-AI will sometimes place down a card as if it were a complete book
+-If there isn't a card in the deck during Gamestate.GoFish then it breaks the game (Debug: Couldn't find a card to display)
+ 	-fix or create a function that handles this(Priority fix)
+
+Logged additions:
+
+-Card animations(Lerp to their respective places)
+- Logic now allows for a Win State
+- Fixed bug where cards would become unclickable and soft-lock game
+- Fixed bug where AI cards would not have a rank or number
+- Fixed bug where isAI was not set to true(broke alot of functionality)
+
+
